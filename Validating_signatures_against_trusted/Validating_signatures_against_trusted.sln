@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validating_signatures_against_trusted", "Validating_signatures_against_trusted\Validating_signatures_against_trusted.csproj", "{B1FF2F3B-ACDC-436B-AFA9-F58CF66A3BF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1FF2F3B-ACDC-436B-AFA9-F58CF66A3BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1FF2F3B-ACDC-436B-AFA9-F58CF66A3BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1FF2F3B-ACDC-436B-AFA9-F58CF66A3BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1FF2F3B-ACDC-436B-AFA9-F58CF66A3BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3014176D-7E09-474C-9E1D-2F20D3E7E4D8}
+	EndGlobalSection
+EndGlobal
