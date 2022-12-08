@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.32916.344
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDF_digital_signature_with_CAdES", "PDF_digital_signature_with_CAdES\PDF_digital_signature_with_CAdES.csproj", "{3B751F41-35A1-4F3A-A1EB-78BC42C65B84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B751F41-35A1-4F3A-A1EB-78BC42C65B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B751F41-35A1-4F3A-A1EB-78BC42C65B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B751F41-35A1-4F3A-A1EB-78BC42C65B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B751F41-35A1-4F3A-A1EB-78BC42C65B84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40EDA3EE-9587-4B7D-94C4-57B0707F71C6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validate_PDF_individual_signatures", "Validate_PDF_individual_signatures\Validate_PDF_individual_signatures.csproj", "{D905B024-A507-4CBB-851C-7B485294B6F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D905B024-A507-4CBB-851C-7B485294B6F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D905B024-A507-4CBB-851C-7B485294B6F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D905B024-A507-4CBB-851C-7B485294B6F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D905B024-A507-4CBB-851C-7B485294B6F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFF6A206-C2A2-437E-8DA4-4855F4BB410A}
+	EndGlobalSection
+EndGlobal

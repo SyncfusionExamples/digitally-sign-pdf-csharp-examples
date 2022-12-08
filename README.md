@@ -1,27 +1,27 @@
 # Digitally Sign and Verify Signatures in PDF Files Using C#
 
-The [Syncfusion PDF Library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library) is a .NET PDF library that allows the users to create and validate PDF digital signatures in C# and VB.NET.
+The [Syncfusion PDF Library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library) is a .NET PDF library that allows the users to create and validate PDF digital signatures in C# and VB.NET.This repository contains examples of digital signatures PDF files in C# 
 
 Sample name | Description
 ------|------
-[PDF digital signatures]() | Create a PDF digital signature.
- [PDF digital signatures with custom appearances]() | create a PDF digital signature with custom appearances.
-[Change the signature appearance]() | Change the signature appearance based on the signature validation.
-[Create PDF digital signatures with CAdES ]() |  Create a PDF digital signatures with CAdES and different hashing algorithms.
-[Add multiple digital signatures in PDF]() |  Add multiple digital signatures in a single PDF document. 
-[Sign a PDF using Windows certificate ]() |  Digitally sign a PDF document using Windows certificate store.
-[Include an Author or certify signature]() |  Create a PDF include an author or certify signature.
-[Sign a PDF with an external signature]() |  Digitally sign a PDF document with an external signature.
-[Sign the existing signature field in a PDF]() |  Digitally sign the existing signature field in a PDF document.
-[Add timestamp to the signature]() |  Add timestamp to the digital signature.
-[Sign a PDF with LTV]() |  Digitally sign a PDF document with long-term validation (LTV).
-[Sign a PDF With LTA]() |  Digitally sign a PDF document with long-term archive timestamps (LTA).
-[Create LTV in an external signature]() |  Create a long-term validation (LTV) in an external signature.
-[Retrieve signature information from an existing PDF ]() |  Retrieve digital signature information from an existing PDF document.
-[Remove existing signatures from a PDF ]() |  Remove existing digital signatures from a PDF document.
-[Validate PDF digital signature]() |  Validate PDF digital signature.
-[Validate individual signatures]() | Validate individual digital signatures in an existing PDF document.
-[Validating signatures against a trusted]() | Validating signatures against a trusted list.
+[PDF digital signatures](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/PDF_digital_signature) | Create a PDF digital signature.
+ [PDF digital signatures with custom appearances](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Digital_signature_custom_appearance) | create a PDF digital signature with custom appearances.
+[Change the signature appearance](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Change_PDF_digital_signature_appearance) | Change the signature appearance based on the signature validation.
+[Create PDF digital signatures with CAdES ](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/PDF_digital_signature_with_CAdES) |  Create a PDF digital signatures with CAdES and different hashing algorithms.
+[Add multiple digital signatures in PDF](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/PDF_multiple_signature) |  Add multiple digital signatures in a single PDF document. 
+[Sign a PDF using Windows certificate ](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Sign_PDF_Windows_Certificate) |  Digitally sign a PDF document using Windows certificate store.
+[Include an Author or certify signature](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Sign_author_or_certify) |  Create a PDF include an author or certify signature.
+[Sign a PDF with an external signature](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Sign_PDF_with_external_signature) |  Digitally sign a PDF document with an external signature.
+[Sign the existing signature field in a PDF](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Sign_existing_signature_field) |  Digitally sign the existing signature field in a PDF document.
+[Add timestamp to the signature](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Add_timestamp_to_digital_signature) |  Add timestamp to the digital signature.
+[Sign a PDF with LTV](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Sign_PDF_with_LTV) |  Digitally sign a PDF document with long-term validation (LTV).
+[Sign a PDF With LTA](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Sign_PDF_with_LTA) |  Digitally sign a PDF document with long-term archive timestamps (LTA).
+[Create LTV in an external signature](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Create_LTV_in_external_signature) |  Create a long-term validation (LTV) in an external signature.
+[Retrieve signature information from an existing PDF ](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Retrieve_digital_signature_information) |  Retrieve digital signature information from an existing PDF document.
+[Remove existing signatures from a PDF ](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Remove_digital_signatures_from_PDF) |  Remove existing digital signatures from a PDF document.
+[Validate PDF digital signature](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Validate_PDF_digital_signature) |  Validate PDF digital signature.
+[Validate individual signatures](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Validate_PDF_individual_signatures) | Validate individual digital signatures in an existing PDF document.
+[Validating signatures against a trusted](https://github.com/SyncfusionExamples/digitally-sign-pdf-csharp-examples/blob/master/Validating_signatures_against_trusted) | Validating signatures against a trusted list.
 
 # How to run the examples
 * Download this project to a location in your disk. 
