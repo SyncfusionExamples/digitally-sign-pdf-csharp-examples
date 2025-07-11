@@ -1,10 +1,7 @@
 ﻿using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Security;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace Sign_PDF_with_LTV
 {
@@ -26,14 +23,28 @@ namespace Sign_PDF_with_LTV
 
             signature.TimeStampServer = new TimeStampServer(new Uri("http://timestamping.ensuredca.com"));
 
-            //Enable LTV document.
-            signature.EnableLtv = true;
+            MemoryStream memoryStream = new MemoryStream();
 
             //Save the PDF document.
-            document.Save("LTV_document.pdf");
+            document.Save(memoryStream);
 
             //Close the document.
             document.Close(true);
+
+            //Load the signed document to update LTV information.
+            PdfLoadedDocument signedDocument = new PdfLoadedDocument(memoryStream);
+
+            //Get the signed signature field.
+            PdfLoadedSignatureField signatureField = signedDocument.Form.Fields[0] as PdfLoadedSignatureField;
+
+            //Update LTV information.
+            signatureField.Signature.EnableLtv = true;
+
+            //Save the signed document with LTV information.
+            signedDocument.Save("SignPDFWithLTV.pdf");
+
+            //Close the signed document.
+            signedDocument.Close(true);
         }
     }
 }

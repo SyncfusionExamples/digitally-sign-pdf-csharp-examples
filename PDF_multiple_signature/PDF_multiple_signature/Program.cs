@@ -1,26 +1,20 @@
 ﻿using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Security;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PDF_multiple_signature
 {
     internal class Program
     {
         static void Main(string[] args)
-        {
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Your license key");
+        {           
             //Load existing PDF document.
             PdfLoadedDocument document = new PdfLoadedDocument(@"../../Data/PDF_Succinctly.pdf");
 
             //Load digital ID with password.
             PdfCertificate certificate = new PdfCertificate(@"../../Data/TestAgreement.pfx", "Test123");
 
-            //Create a Revision 2 signature with loaded digital ID.
+            //Create a Revision 1 signature with loaded digital ID.
             PdfSignature signature = new PdfSignature(document, document.Pages[0], certificate, "DigitalSignature1");
 
             //Changing the digital signature standard and hashing algorithm.
@@ -35,7 +29,9 @@ namespace PDF_multiple_signature
             //Close the document.
             document.Close(true);
 
+            //Load the saved PDF document from the stream.
             PdfLoadedDocument document2 = new PdfLoadedDocument(stream);
+
             //Load digital ID with password.
             PdfCertificate certificate2 = new PdfCertificate(@"../../Data/DigitalSignatureTest.pfx", "DigitalPass123");
 
