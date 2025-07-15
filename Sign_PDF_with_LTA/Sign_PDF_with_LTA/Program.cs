@@ -1,11 +1,7 @@
-﻿using Syncfusion.Pdf.Parsing;
+﻿using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Security;
-using Syncfusion.Pdf;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sign_PDF_with_LTA
 {
@@ -27,9 +23,6 @@ namespace Sign_PDF_with_LTA
 
             signature.TimeStampServer = new TimeStampServer(new Uri("http://timestamping.ensuredca.com"));
 
-            //Enable LTV document.
-            signature.EnableLtv = true;
-
             //Save the PDF document.
             document.Save("LTV_document.pdf");
 
@@ -41,14 +34,23 @@ namespace Sign_PDF_with_LTA
 
             PdfLoadedPage lpage = ltDocument.Pages[0] as PdfLoadedPage;
 
+            //Enable the LTV (Long Term Validation) for the existing signed field            
+            PdfLoadedSignatureField signatureField = ltDocument.Form.Fields[0] as PdfLoadedSignatureField;
+
+            signatureField.Signature.EnableLtv = true;
 
             //Create PDF signature with empty certificate.
-
             PdfSignature timeStamp = new PdfSignature(lpage, "timestamp");
 
 
+            // Note: If you encounter an "Arithmetic operation resulted in an overflow" error while creating an LTA,
+            // it is likely due to the default estimated signature size being insufficient. 
+            //timeStamp.EstimatedSignatureSize = 24000;
+
+            //Configure the time stamp server for the signature.
             timeStamp.TimeStampServer = new TimeStampServer(new Uri("http://timestamping.ensuredca.com"));
 
+            //Save and close the document
             ltDocument.Save("PAdES B-LTA.pdf");
 
             ltDocument.Close(true);

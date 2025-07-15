@@ -13,28 +13,23 @@ namespace Validate_PDF_digital_signature
         static void Main(string[] args)
         {
             //Load an existing PDF document.
-            PdfLoadedDocument document = new PdfLoadedDocument(@"../../Data/MultipleSignature.pdf");
-            //Load PDF form.
-            PdfLoadedForm form = document.Form;
-
-            List<PdfSignatureValidationResult> results;
-
-            if (form != null)
+            using (PdfLoadedDocument document = new PdfLoadedDocument(@"../../Data/MultipleSignature.pdf"))
             {
+                //Load PDF form.
+                PdfLoadedForm form = document.Form;
 
-                //Validate all the digital signatures present in the PDF document.
-                bool isvalid = form.Fields.ValidateSignatures(out results);
+                if (form != null)
+                {
+                    //Validate all the digital signatures present in the PDF document.
+                    bool isValid = form.Fields.ValidateSignatures(out List<PdfSignatureValidationResult> results);
 
-                //Show the result based on the result.
-                if (isvalid)
-                    Console.WriteLine("All signatures are valid");
-                else
-                    Console.WriteLine("At least one signature is invalid");
-
+                    //Show the result based on the result.
+                    if (isValid)
+                        Console.WriteLine("All signatures are valid");
+                    else
+                        Console.WriteLine("At least one signature is invalid");
+                }
             }
-
-            //Close the document.
-            document.Close(true);
         }
     }
 }

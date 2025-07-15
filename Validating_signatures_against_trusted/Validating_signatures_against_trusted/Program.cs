@@ -14,33 +14,35 @@ namespace Validating_signatures_against_trusted
         static void Main(string[] args)
         {
             //Load an existing PDF document.
-            PdfLoadedDocument document = new PdfLoadedDocument(@"../../Data/MultipleSignature.pdf");
-            //Load PDF form.
-            PdfLoadedForm form = document.Form;
-
-            //Load Windows certificate store.
-            X509Store store = new X509Store("MY", StoreLocation.CurrentUser);
-            store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
-            X509Certificate2Collection collection = (X509Certificate2Collection)store.Certificates;
-
-            if (form != null)
+            using (PdfLoadedDocument document = new PdfLoadedDocument(@"../../Data/MultipleSignature.pdf"))
             {
-                foreach (PdfLoadedField field in form.Fields)
+                //Load PDF form.
+                PdfLoadedForm form = document.Form;
+
+                //Load Windows certificate store.
+                X509Store store = new X509Store("MY", StoreLocation.CurrentUser);
+                store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
+                X509Certificate2Collection collection = (X509Certificate2Collection)store.Certificates;
+
+                if (form != null)
                 {
-                    if (field is PdfLoadedSignatureField)
+                    foreach (PdfLoadedField field in form.Fields)
                     {
-                        PdfLoadedSignatureField signatureField = field as PdfLoadedSignatureField;
+                        if (field is PdfLoadedSignatureField)
+                        {
+                            PdfLoadedSignatureField signatureField = field as PdfLoadedSignatureField;
 
-                        //Validate the digital signature against Windows certificate store.
-                        PdfSignatureValidationResult result = signatureField.ValidateSignature(collection);
+                            //Validate the digital signature against Windows certificate store.
+                            PdfSignatureValidationResult result = signatureField.ValidateSignature(collection);
 
-                        if (result.IsSignatureValid)
-                            Console.WriteLine("Signature is valid");
-                        else
-                            Console.WriteLine("Signature is invalid");
+                            if (result.IsSignatureValid)
+                                Console.WriteLine("Signature is valid");
+                            else
+                                Console.WriteLine("Signature is invalid");
 
-                        //Update the signatures status based on the certificate validation against certificate store.
-                        Console.WriteLine("Signature status: " + result.SignatureStatus);
+                            //Update the signatures status based on the certificate validation against certificate store.
+                            Console.WriteLine("Signature status: " + result.SignatureStatus);
+                        }
                     }
                 }
             }
